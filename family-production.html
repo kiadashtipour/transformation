@@ -1,0 +1,503 @@
+<style>
+.menu {
+  --menu-height: 40px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.menu ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
+}
+.menu ul li, .menu ul li a {
+  opacity: 0.8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 200ms;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.menu ul li:hover, .menu ul li a:hover {
+  opacity: 1;
+}
+.menu ul li a, .menu ul li a a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.menu ul li {
+  padding-right: 36px;
+}
+.menu ul li::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFA500;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu ul .link::before {
+  padding-right: 0;
+  display: none;
+}
+.menu > ul {
+  display: flex;
+  height: var(--menu-height);
+  align-items: center;
+  background-color: #000000;
+}
+.menu > ul li {
+  position: relative;
+  margin: 0 8px;
+}
+.menu > ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  min-width: 160px;
+  background-color: #333;
+  position: absolute;
+  top: calc(var(--menu-height) + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 200ms;
+  transition-delay: 200ms;
+}
+.menu > ul li ul li {
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  padding-right: 40px;
+}
+.menu > ul li ul li::before {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #FFA500;
+}
+.menu > ul li ul li ul {
+  top: -2%;
+  left: 100%;
+  transform: translate(0);
+}
+.menu > ul li ul li:hover {
+  background-color: #000000;
+}
+.menu > ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
+</style>
+
+<div class="menu">
+   <ul>
+     <li>
+       Social and Political Science 
+       <ul>
+  
+           <li>Labour and Workers </a>
+		    <ul>
+           
+               <li>Migrant workers 
+			   
+			       <ul>
+             <li class="link">
+               <a href="">Asia</a>
+             </li>
+             <li class="link">
+               <a href="">Western Europe</a>
+             </li>
+			  <li class="link">
+               <a href="">Southern Europe</a>
+             </li>
+           </ul>
+         </li>
+			   
+             </li>
+           
+               <li>The job markets 
+             
+			     <ul>
+             <li class="link">
+               <a href="">Unemployment </a>
+             </li>
+             <li class="link">
+               <a href="">Precarious vs permanent positions </a>
+             </li>
+			 <li class="link">
+               <a href="">Layoffs </a>
+             </li>
+			 <li class="link">
+               <a href="">Furlough schemes </a>
+             </li>
+			 	 <li class="link">
+               <a href="">Universal income </a>
+             </li>
+			 	 <li class="link">
+               <a href="">Erased job sectors  </a>
+             </li>
+			              </li>
+			 	 <li class="link">
+               <a href="">Emerging job sectors  </a>
+             </li>
+           </ul>
+         </li>
+			 
+				 
+               <li>Safety in Workplace 
+			   
+			       <ul>
+             <li class="link">
+               <a href="">Physical distancing in the hospitality sector </a>
+             </li>
+             <li class="link">
+               <a href="">Protection measures in service sectors </a>
+             </li>
+			   <li class="link">
+               <a href="">Regulation of employment terms  </a>
+             </li>
+           </ul>
+         </li>
+			   
+			   
+             <li>
+                Health workers 
+                 <ul>
+                   <li class="link">
+                     <a href="">Public support</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Personal Protective Equipment </a>
+                   </li>
+                   <li>
+                    Care homes 
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         
+         </li>
+         <li class="link">
+           <a href="">Institutional Policies</a>
+         </li>
+         <li>
+           Civil Society 
+           <ul>
+             <li class="link">
+               <a href="">gg</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+           </ul>
+         </li>
+		    <li class="link">
+           <a href="">Inequalities </a>
+         </li>
+		   </li>
+		    <li class="link">
+           <a href="">Education  </a>
+         </li>
+		   </li>
+		   </li>
+		    <li class="link">
+           <a href="">International Relation </a>
+         </li>
+       </ul>
+     </li>
+     <li>
+       Arts and Humanities 
+       <ul>
+         <li class="link">
+           <a href="">Religious responses </a>
+         </li>
+         <li class="link">
+           <a href="">Languages and literatures</a>
+         </li>
+         <li>
+           History and philosophy
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Performance arts </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Visual arts  </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Cultural heritage  </a>
+         </li>
+       </ul>
+     </li>     
+     <li class="link">Media and Management 
+	        <ul>
+         <li class="link">
+           <a href="">Campaigns  </a>
+         </li>
+         <li class="link">
+           <a href="">Scientific discourse </a>
+         </li>
+         <li>
+           Conspiracy discourse 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Disinformation in the media  </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Organizational forms   </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Disaster management   </a>
+         </li>
+       </ul>
+     </li>     
+
+     <li class="link">Engineering and Technology 
+	 	        <ul>
+         <li class="link">
+           <a href="">Communication systems   </a>
+         </li>
+         <li class="link">
+           <a href="">Medical infrastructure  </a>
+         </li>
+         <li>
+           Industry adaptation 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Innovation    </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Green technologies    </a>
+
+       </ul>
+     </li>   
+	 <li class="link">Life and Exact Sciences  
+	 	 	        <ul>
+         <li class="link">
+           <a href="">Medicine   </a>
+         </li>
+         <li class="link">
+           <a href="">Epidemiology and virology   </a>
+         </li>
+         <li>
+           Ecology 
+           <ul>
+             <li class="link">
+               <a href="">Im a </a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Systems and networks    </a>
+			</li>
+
+       </ul>
+     </li> 
+   </ul>
+</div>
+
+<br>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<br>
+<br>
+
+
+<h1> Family Productions  </h1>
+
+
+<p> This entry deals the video productions done by the families during the pandemic. The sections in this entry comprise a wide variety of videos ranging from entertainment to innovative.   </p>
+<br>
+<h3> Short Film (കിളിമൊഴി, Bird Logic) <h3>
+<br>
+<h3>Case description </h3>
+<br>
+<p> ‘Kids Tok’ YouTube channel released a short film in the name കിളിമൊഴി (kilimozhi) casting Ami Airin as the mother and Mina Mehrin as the baby girl – both are the siblings aged below ten- and directed by Afzal Ayikkarappadi, father of the kids. The short film shows two parts: the girls in the first part and the second part personifies two lovebirds. The story of the short film revolves around the home quarantine of both the human and animals.       </p>
+
+<h3> SGD Targets</h3>
+<br>
+<p> 4 (Good Health and Well-Being); 4 (Quality Education); 15 (Life on Land)  </p>
+
+<br>
+<b>Functions  </b>
+<br>
+
+<p>
+
+The short film കിളിമൊഴി is inclusive as it depicts the rights of human beings and animals with equal importance. The video released by the private YouTube channel conveys the progressive message of harmony and well-being on earth. Though the short film was released in the context of Covid_19, the message suits to all backgrounds.  
+</p>
+
+
+<br> <b>Further Sources </b>
+
+<br><a href="https://www.youtube.com/watch?v=8au6DjP3NFI   ">https://www.youtube.com/watch?v=8au6DjP3NFI  </a>
+
+<br>
+<h3> Lockdown Restaurant at Home For Their Kids (Parenting)  <h3>
+<br>
+
+<h3> Case Description</h3>
+
+<p>
+The LADbible YouTube channel published the video titled Parents Create a Lockdown Restaurant at Home For Their Kids showing the story of a family in Paisley, Scotland. Mom and dad of Evan and Lucan -two young lads – prepared their house as the Mommy and Dady’s Restaurant with the exact standard of a restaurant: starter, main course and the dessert - with a couple of choices!. The mommy was the waitress, and the dad was the chef.   
+</p>
+
+<h3> SGD Targets</h3>
+<br>
+<p> 3 (Good Health and Well-Being); 4 (Quality Education)  </p>
+
+<br>
+<h3> Functions</h3>
+<p> 
+The parenting video of ‘lockdown restaurant’ conveys the idea of effective parenting with the inclusive approach to the critical situation of Covid_19. The home restaurant was arranged when the kids were keen to go out to a restaurant, as they were unaware of the lockdown in the UK. The kids and parents enacted perfectly, and the video conveys the standard parenting method. 
+
+</p>
+
+<br> <b>Further Sources </b>
+
+<br><a href="https://www.youtube.com/watch?v=5827bqd4VSc   ">https://www.youtube.com/watch?v=5827bqd4VSc  </a>
+
+<br>
+</body>
+
+</html>

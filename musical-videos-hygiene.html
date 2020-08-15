@@ -1,0 +1,564 @@
+<style>
+.menu {
+  --menu-height: 40px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.menu ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
+}
+.menu ul li, .menu ul li a {
+  opacity: 0.8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 200ms;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.menu ul li:hover, .menu ul li a:hover {
+  opacity: 1;
+}
+.menu ul li a, .menu ul li a a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.menu ul li {
+  padding-right: 36px;
+}
+.menu ul li::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFA500;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu ul .link::before {
+  padding-right: 0;
+  display: none;
+}
+.menu > ul {
+  display: flex;
+  height: var(--menu-height);
+  align-items: center;
+  background-color: #000000;
+}
+.menu > ul li {
+  position: relative;
+  margin: 0 8px;
+}
+.menu > ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  min-width: 160px;
+  background-color: #333;
+  position: absolute;
+  top: calc(var(--menu-height) + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 200ms;
+  transition-delay: 200ms;
+}
+.menu > ul li ul li {
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  padding-right: 40px;
+}
+.menu > ul li ul li::before {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #FFA500;
+}
+.menu > ul li ul li ul {
+  top: -2%;
+  left: 100%;
+  transform: translate(0);
+}
+.menu > ul li ul li:hover {
+  background-color: #000000;
+}
+.menu > ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
+</style>
+
+<div class="menu">
+   <ul>
+     <li>
+       Social and Political Science 
+       <ul>
+  
+           <li>Labour and Workers </a>
+		    <ul>
+           
+               <li>Migrant workers 
+			   
+			       <ul>
+             <li class="link">
+               <a href="">Asia</a>
+             </li>
+             <li class="link">
+               <a href="">Western Europe</a>
+             </li>
+			  <li class="link">
+               <a href="">Southern Europe</a>
+             </li>
+           </ul>
+         </li>
+			   
+             </li>
+           
+               <li>The job markets 
+             
+			     <ul>
+             <li class="link">
+               <a href="">Unemployment </a>
+             </li>
+             <li class="link">
+               <a href="">Precarious vs permanent positions </a>
+             </li>
+			 <li class="link">
+               <a href="">Layoffs </a>
+             </li>
+			 <li class="link">
+               <a href="">Furlough schemes </a>
+             </li>
+			 	 <li class="link">
+               <a href="">Universal income </a>
+             </li>
+			 	 <li class="link">
+               <a href="">Erased job sectors  </a>
+             </li>
+			              </li>
+			 	 <li class="link">
+               <a href="">Emerging job sectors  </a>
+             </li>
+           </ul>
+         </li>
+			 
+				 
+               <li>Safety in Workplace 
+			   
+			       <ul>
+             <li class="link">
+               <a href="">Physical distancing in the hospitality sector </a>
+             </li>
+             <li class="link">
+               <a href="">Protection measures in service sectors </a>
+             </li>
+			   <li class="link">
+               <a href="">Regulation of employment terms  </a>
+             </li>
+           </ul>
+         </li>
+			   
+			   
+             <li>
+                Health workers 
+                 <ul>
+                   <li class="link">
+                     <a href="">Public support</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Personal Protective Equipment </a>
+                   </li>
+                   <li>
+                    Care homes 
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         
+         </li>
+         <li class="link">
+           <a href="">Institutional Policies</a>
+         </li>
+         <li>
+           Civil Society 
+           <ul>
+             <li class="link">
+               <a href="">gg</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+           </ul>
+         </li>
+		    <li class="link">
+           <a href="">Inequalities </a>
+         </li>
+		   </li>
+		    <li class="link">
+           <a href="">Education  </a>
+         </li>
+		   </li>
+		   </li>
+		    <li class="link">
+           <a href="">International Relation </a>
+         </li>
+       </ul>
+     </li>
+     <li>
+       Arts and Humanities 
+       <ul>
+         <li class="link">
+           <a href="">Religious responses </a>
+         </li>
+         <li class="link">
+           <a href="">Languages and literatures</a>
+         </li>
+         <li>
+           History and philosophy
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Performance arts </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Visual arts  </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Cultural heritage  </a>
+         </li>
+       </ul>
+     </li>     
+     <li class="link">Media and Management 
+	        <ul>
+         <li class="link">
+           <a href="">Campaigns  </a>
+         </li>
+         <li class="link">
+           <a href="">Scientific discourse </a>
+         </li>
+         <li>
+           Conspiracy discourse 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Disinformation in the media  </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Organizational forms   </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Disaster management   </a>
+         </li>
+       </ul>
+     </li>     
+
+     <li class="link">Engineering and Technology 
+	 	        <ul>
+         <li class="link">
+           <a href="">Communication systems   </a>
+         </li>
+         <li class="link">
+           <a href="">Medical infrastructure  </a>
+         </li>
+         <li>
+           Industry adaptation 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Innovation    </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Green technologies    </a>
+
+       </ul>
+     </li>   
+	 <li class="link">Life and Exact Sciences  
+	 	 	        <ul>
+         <li class="link">
+           <a href="">Medicine   </a>
+         </li>
+         <li class="link">
+           <a href="">Epidemiology and virology   </a>
+         </li>
+         <li>
+           Ecology 
+           <ul>
+             <li class="link">
+               <a href="">Im a </a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Systems and networks    </a>
+			</li>
+
+       </ul>
+     </li> 
+   </ul>
+</div>
+
+<br>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<br>
+<br>
+
+<h1> Musical Videos on Hygiene   </h1>
+
+<p> Social media introduced the opportunity for artists and performers to present creative responses to the need to educate the public about hygiene practices.  </p>
+
+<h3>Case description </h3>
+<br>
+<p> In 27 February, 2020, the Iranian actor, Danial Kheirkhah, posted on Instagram a one-minute video demonstrating how to wash hands properly. The video is presented as a black-and-white comedy film, clearly inspired by Charlie Chaplin’s Barber Shop Scene (The Great Dictator, 1940). Kheirkhah in the role of an orchestra conductor performs movements demonstrating the medical practice of hand-washing set to the tune of Johannes Brahms’ Hungarian Dance No. 1. The Iranian media outlet in English Iran Front Page posted the video on their Facebook page on 1 March 2020.      </p>
+
+<h3> SGD Targets</h3>
+<br>
+<p> 3 (Good Health and Well-Being); 10 (Reduced Inequalities)  </p>
+
+<br>
+<b>Functions  </b>
+<br>
+
+<p>
+
+3 (Good Health & Well-Being); 10 (Reduced Inequalities) 
+<br>
+
+
+The video was released on social media and circulated freely across the world; in that sense it is inclusive. It is in a silent movie mode, so no language skills are required. The first post by the artist addresses the Iranian public in the Persian language with English following. In conveying the message of the WHO regarding the hand-washing method, the artist aims at reaching out to his Instagram followers, mainly (but not exclusively) Persian speakers. In this sense it is progressive, as it bridges between the global institution and the Iranian public. The comic and short presentation popularizes the hygienic instruction to the public. In addressing the Iranian public with references to Western icons (Chaplin, Brahms), the artist further demonstrates an Iranian cosmopolitan culture, thus targeting SDG 10 against the backdrop of geopolitical inequalities.  
+</p>
+
+
+<br> <b>Further Sources </b>
+
+<br><a href="https://www.youtube.com/watch?v=cB3ET6mD1LE  ">Image source: Iranian Front Page on YouTube </a>
+
+<br><a href="Coronavirus - Music and Culture to improve Preparedness and to Help Victims and Caregivers ">Daily Kos, 7/3/2020 </a>
+
+<br>
+<h3> Policemen Dance (Kerala) <h3>
+<h3>Case description </h3>
+<br>
+<p>
+On March 17, 2020, the Kerala State Police media team put forward a dance video to raise awareness of the proper way of handwashing. The dance is performed to the soundtrack of the Malayalam song Kalakkatha from the film Ayyapanum Koshiyum that was released on February 2020. The song’s lyrics are in the Irula language representing marginal voices of the Irula people, one of the tribal communities inhabiting the Western Ghats. The singer and lyricist is Nanchamma, a tribal artist from Attapady, Kerala.  
+</p>
+<h3> SGD Targets</h3>
+<br>
+<p>
+3 (Good Health and Well-Being); 10 (Reduced Inequalities); 17 (Partnerships) 
+</p>
+
+<br>
+<b>Functions  </b>
+<br>
+
+<p>   Inclusive; deliberate; sudden; bottom-up; progressive </p>
+
+<p>
+The video is inclusive in addressing the public with a song in the Irula language by an Irula singer and song-writer from a marginalized tribal community. It deliberately addresses the measures to be taken for slowing the spread of the virus, namely hand washing and wearing masks. It is a spontaneous production by the Kerala Police Media Team, hence a sudden response to the pandemic directed bottom-up, from policemen working on the grassroots level to the public. It is progressive in targeting three SDGs, safeguarding the public health, inclusive of marginalized voices, and spreading the global organization WHO’s messages. 
+
+</p>
+
+
+<br> <b>Further Sources </b>
+
+<br><a href= "Have you seen this hand washing dance by Kerala police yet?">"Have you seen this hand washing dance by Kerala police yet?” Indian Express, 17/3/2020  </a>
+
+
+<h3> Father and Daughter (Yemen)  <h3>
+<h3>Case description </h3>
+<br>
+<p>
+A video presenting a father and a daughter discussing how to confront the Corona, the singers Akram al-Sind and Wadha Hakimi. The video was posted on YouTube on 29/3/2020. Lyrics by Qutaiba al-Salahi and Abd al-Rahman al-Salami. Video: Anwar al-Sind. 
+</p>
+
+<h3> SGD Targets</h3>
+<br>
+<p>
+3 (Good Health and Well-Being); 5 (Gender Equality)
+</p>
+
+<br>
+<b>Functions  </b>
+<br>
+<p>
+The video presents both male and female figures, therefore it is inclusive. The video is produced for educating the viewers how to maintain hygiene and physical distancing, and it is freely accessible for watching and sharing. The initiative is by the artists presenting and producing the video, therefore it is bottom-up. Targeting 2 SDGs it is progressive, especially in the context of war-torn Yemen, with collapsing health systems. 
+
+</p>
+
+<br> <b>Further Sources </b>
+
+<br><a href= "https://al-masdaronline.net/national/632"> “Yemeni Artists Fight Coronavirus through Songs”, Almasdar, 13 April 2020. </a>
+
+<br>
+<h3> Stay Home (Bahrein)  <h3>
+<h3>Case description </h3>
+<br>
+<p>
+The YouTube channel hakaya_bh from Bahrain published a video song la tatala’ min al-bayt (don’t get out of the house) casting Hasan Ali as the youngest child and Sayid Fazil Mousavi as the father of the child. The video song tells the story of a healthy conversation between a child and his father. The story constructs the idea of consciousness during the time of Covid-19, which is applicable for all age. The video song is based on the parenting theme as the video ends with the comment of the child, ‘thank you baba, I learn things from you!’ 
+
+</p>
+
+<h3> SGD Targets</h3>
+<br>
+<p>
+3 (Good Health and Well-Being) 
+
+</p>
+
+<br>
+<b>Functions  </b>
+<br>
+<p>
+Exclusive; Deliberate; Consistent; Bottom-up; Progressive
+
+
+</p>
+<p>
+
+The video focuses on the presentation of male figures, hence it is exclusive. It deliberately addresses the guidelines of the WHO for keeping the public spaces safe. Posted on YouTube, it is meant to remain in the public (virtual) space. The production is by the YouTube channel, apparently at the grassroots level. In addressing SDG 3, the video is progressive. 
+
+</p>
+
+</body>
+
+</html>

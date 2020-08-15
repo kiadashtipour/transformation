@@ -1,0 +1,551 @@
+<style>
+.menu {
+  --menu-height: 40px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.menu ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
+}
+.menu ul li, .menu ul li a {
+  opacity: 0.8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 200ms;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.menu ul li:hover, .menu ul li a:hover {
+  opacity: 1;
+}
+.menu ul li a, .menu ul li a a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.menu ul li {
+  padding-right: 36px;
+}
+.menu ul li::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFA500;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu ul .link::before {
+  padding-right: 0;
+  display: none;
+}
+.menu > ul {
+  display: flex;
+  height: var(--menu-height);
+  align-items: center;
+  background-color: #000000;
+}
+.menu > ul li {
+  position: relative;
+  margin: 0 8px;
+}
+.menu > ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  min-width: 160px;
+  background-color: #333;
+  position: absolute;
+  top: calc(var(--menu-height) + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 200ms;
+  transition-delay: 200ms;
+}
+.menu > ul li ul li {
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  padding-right: 40px;
+}
+.menu > ul li ul li::before {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #FFA500;
+}
+.menu > ul li ul li ul {
+  top: -2%;
+  left: 100%;
+  transform: translate(0);
+}
+.menu > ul li ul li:hover {
+  background-color: #000000;
+}
+.menu > ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
+</style>
+
+<div class="menu">
+   <ul>
+     <li>
+       Social and Political Science 
+       <ul>
+  
+           <li>Labour and Workers </a>
+		    <ul>
+           
+               <li>Migrant workers 
+			   
+			       <ul>
+             <li class="link">
+               <a href="">Asia</a>
+             </li>
+             <li class="link">
+               <a href="">Western Europe</a>
+             </li>
+			  <li class="link">
+               <a href="">Southern Europe</a>
+             </li>
+           </ul>
+         </li>
+			   
+             </li>
+           
+               <li>The job markets 
+             
+			     <ul>
+             <li class="link">
+               <a href="">Unemployment </a>
+             </li>
+             <li class="link">
+               <a href="">Precarious vs permanent positions </a>
+             </li>
+			 <li class="link">
+               <a href="">Layoffs </a>
+             </li>
+			 <li class="link">
+               <a href="">Furlough schemes </a>
+             </li>
+			 	 <li class="link">
+               <a href="">Universal income </a>
+             </li>
+			 	 <li class="link">
+               <a href="">Erased job sectors  </a>
+             </li>
+			              </li>
+			 	 <li class="link">
+               <a href="">Emerging job sectors  </a>
+             </li>
+           </ul>
+         </li>
+			 
+				 
+               <li>Safety in Workplace 
+			   
+			       <ul>
+             <li class="link">
+               <a href="">Physical distancing in the hospitality sector </a>
+             </li>
+             <li class="link">
+               <a href="">Protection measures in service sectors </a>
+             </li>
+			   <li class="link">
+               <a href="">Regulation of employment terms  </a>
+             </li>
+           </ul>
+         </li>
+			   
+			   
+             <li>
+                Health workers 
+                 <ul>
+                   <li class="link">
+                     <a href="">Public support</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Personal Protective Equipment </a>
+                   </li>
+                   <li>
+                    Care homes 
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         
+         </li>
+         <li class="link">
+           <a href="">Institutional Policies</a>
+         </li>
+         <li>
+           Civil Society 
+           <ul>
+             <li class="link">
+               <a href="">gg</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+           </ul>
+         </li>
+		    <li class="link">
+           <a href="">Inequalities </a>
+         </li>
+		   </li>
+		    <li class="link">
+           <a href="">Education  </a>
+         </li>
+		   </li>
+		   </li>
+		    <li class="link">
+           <a href="">International Relation </a>
+         </li>
+       </ul>
+     </li>
+     <li>
+       Arts and Humanities 
+       <ul>
+         <li class="link">
+           <a href="">Religious responses </a>
+         </li>
+         <li class="link">
+           <a href="">Languages and literatures</a>
+         </li>
+         <li>
+           History and philosophy
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Performance arts </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Visual arts  </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Cultural heritage  </a>
+         </li>
+       </ul>
+     </li>     
+     <li class="link">Media and Management 
+	        <ul>
+         <li class="link">
+           <a href="">Campaigns  </a>
+         </li>
+         <li class="link">
+           <a href="">Scientific discourse </a>
+         </li>
+         <li>
+           Conspiracy discourse 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Disinformation in the media  </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Organizational forms   </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Disaster management   </a>
+         </li>
+       </ul>
+     </li>     
+
+     <li class="link">Engineering and Technology 
+	 	        <ul>
+         <li class="link">
+           <a href="">Communication systems   </a>
+         </li>
+         <li class="link">
+           <a href="">Medical infrastructure  </a>
+         </li>
+         <li>
+           Industry adaptation 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Innovation    </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Green technologies    </a>
+
+       </ul>
+     </li>   
+	 <li class="link">Life and Exact Sciences  
+	 	 	        <ul>
+         <li class="link">
+           <a href="">Medicine   </a>
+         </li>
+         <li class="link">
+           <a href="">Epidemiology and virology   </a>
+         </li>
+         <li>
+           Ecology 
+           <ul>
+             <li class="link">
+               <a href="">Im a </a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Systems and networks    </a>
+			</li>
+
+       </ul>
+     </li> 
+   </ul>
+</div>
+
+<br>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<br>
+<br>
+
+<h1> Anti-Government Protests    </h1>
+
+<p> Civil unrest occurs in response to lockdown measures or legislation in response to the pandemic. The protests in this entry are against government measures for curbing the spread of the virus or in opposition to undemocratic reforms taking place during the pandemic crisis.   </p>
+
+<p> In Serbia</p>
+<h3>Case description </h3>
+<br>
+<p>
+
+On Tuesday 7 July 2020 Serbia recorded the highest daily toll of COVID-19 299 new cases and 13 deaths. To mitigate the spread of the virus, on the same day the Aleksandar Vucic government planned to reimpose a round-the-clock weekend lockdown in Serbia. By the evening of the day (7th Tuesday) several cities of Serbia were filled by protesters challenging the lockdown plan of the government. The protest lasted for two days, and it turned violent in the capital city of Belgrade. Thousands of protesters fought with the police and stormed Serbia’ parliament. On 10 July the government crisis mitigation team decided to ease the lockdown to limited outdoor and indoor public gathering of no more than ten people. While writing this entry (13/July/2020), the protest in Serbia lasted for the fifth night and the demand raised to the resignation of the President Aleksandar Vucic. 
+
+</p>
+
+<h3> SGD Targets</h3>
+<br>
+<p> 16 (Peace, justice and strong institutions)   </p>
+
+<br>
+<b>Functions  </b>
+<br>
+
+<p>
+
+Inclusive; Unintentional; Sudden; Bottom-up; Progressive 
+<br>
+
+The protests are a mixed bag of reasons for civil unrest, expressing frustration at authoritarian measures as well as mishandling of the pandemic, with the government accusing foreign agents in incitement of the public and the opposition accusing the government in infiltrating the crowds with violent provocateurs. The progressive protest meets the SDG goals demanding the resignation of the president, as the sustainable development is not possible without the effective governance and strong institutions. 
+
+</p>
+
+
+<br> <b>Further Sources </b>
+
+<br><a href="https://www.theguardian.com/world/2020/jul/11/serbian-police-arrest-71-in-coronavirus-protests  ">“Serbian police arrest 71 in coronavirus protests”, The Guardian 11 July 2020  </a>
+
+<br><a href=" https://youtu.be/tUTb7gA6ZhI ">“Serbia protests against the government's coronavirus response turn violent | DW News”, DW News, 9 July 2020  </a>
+
+<br>
+<h3>Anti-Lockdown Protests (US)  </h3>
+<h3>Case description </h3>
+<br>
+<p> In mid-April, conservatives and right-wingers began protesting lockdown measures in several states, against the guidelines of the CDC. The protests were characterized by demands to open businesses and continue “business as usual”, downplaying the risks involved in letting the Coronavirus run through the population.  </p>
+<br>
+<h3> SGD Targets</h3>
+<p>NA </p>
+<br>
+<b>Functions  </b>
+<br>
+<p>
+</p>
+Exclusive; Unintentional; Sudden; Bottom-up; Regressive 
+<p>
+The protests were characterized by white-supremacist groups, and protestors proclaimed they would rather let the old and the vulnerable die of the disease than endanger the economy and their personal freedoms. The unrest was in response to governors’ decisions to lockdown states. 
+</p>
+
+<br> <b>Further Sources </b>
+<br><a href=" The anti-lockdown movement: a very American protest amid coronavirus pandemic” ITV News, 20 April 2020">https://www.youtube.com/watch?v=AYrTp08p5Cs  </a>
+
+<br>
+<h3>Anti-Lockdown Protests (Germany)   </h3>
+<h3>Case description </h3>
+<br>
+<p>
+In early May 2020, Berlin and other major cities in Germany witnessed a wave of protests in opposition to the lockdown measures taken by the government. The media and public official raised concerns over the infiltration of radical right-wing groups and conspiracy theorists into the protests. 
+
+</p>
+
+<h3>Case description </h3>
+<br>
+<p>
+In early May 2020, Berlin and other major cities in Germany witnessed a wave of protests in opposition to the lockdown measures taken by the government. The media and public official raised concerns over the infiltration of radical right-wing groups and conspiracy theorists into the protests. 
+
+</p>
+
+<br>
+
+<h3> Functions</h3>
+
+<p>
+Demanding to proceed with business as usual even at the cost of lives of the elderly and the vulnerable is an exclusive trend, especially when supported by white-supremacist groups. The unrest leading to the protests was in spontaneous response to the lockdown and the frustrations involved. 
+
+</p>
+
+<br> <b>Further Sources </b>
+<br><a href=" Germany Rocked by Massive Anti-Lockdown Protests"> AFP, New Straits Times, 16 May 2020. </a>
+
+<br>
+<h3>Anti-Lockdown Protests (Israel)   </h3>
+<h3>Case description </h3>
+<br>
+<p>
+Israel saw three election campaigns in one year with the last one on 2 March 2020, soon followed by growing restrictions and lockdown. In mid-April, anti-corruption activists and liberal democracy advocates began protesting while keeping physical distancing and prevention measures (see here). Smaller scale protests again the occupation of Palestine and news of pending annexation took place in early June (see here). In early July, following a deteriorating economic situation and increased police brutality, tens of thousands took out to the streets in several different activist groups joining in protests-cum-riots, some involving significant distrust of the government Corona-policy (see here). 
+</p>
+<br>
+
+<h3> Functions</h3>
+
+<p>
+Exclusive; Unintentional; Sudden; Bottom-up; Regressive 
+</p>
+<p>
+The protests mainly target the prime minister demanding his resignation. At the same time, they express frustration and rage, as well as pandemic-skepticism. They are exclusive of the Palestinian citizens and residents' concerns and marked by ethno-nationalism.  
+</p>
+
+</body>
+
+</html>

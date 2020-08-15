@@ -1,0 +1,482 @@
+<style>
+.menu {
+  --menu-height: 40px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.menu ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
+}
+.menu ul li, .menu ul li a {
+  opacity: 0.8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 200ms;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.menu ul li:hover, .menu ul li a:hover {
+  opacity: 1;
+}
+.menu ul li a, .menu ul li a a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.menu ul li {
+  padding-right: 36px;
+}
+.menu ul li::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFA500;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu ul .link::before {
+  padding-right: 0;
+  display: none;
+}
+.menu > ul {
+  display: flex;
+  height: var(--menu-height);
+  align-items: center;
+  background-color: #000000;
+}
+.menu > ul li {
+  position: relative;
+  margin: 0 8px;
+}
+.menu > ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  min-width: 160px;
+  background-color: #333;
+  position: absolute;
+  top: calc(var(--menu-height) + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 200ms;
+  transition-delay: 200ms;
+}
+.menu > ul li ul li {
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  padding-right: 40px;
+}
+.menu > ul li ul li::before {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #FFA500;
+}
+.menu > ul li ul li ul {
+  top: -2%;
+  left: 100%;
+  transform: translate(0);
+}
+.menu > ul li ul li:hover {
+  background-color: #000000;
+}
+.menu > ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
+</style>
+
+<div class="menu">
+   <ul>
+     <li>
+       Social and Political Science 
+       <ul>
+  
+           <li>Labour and Workers </a>
+		    <ul>
+           
+               <li>Migrant workers 
+			   
+			       <ul>
+             <li class="link">
+               <a href="">Asia</a>
+             </li>
+             <li class="link">
+               <a href="">Western Europe</a>
+             </li>
+			  <li class="link">
+               <a href="">Southern Europe</a>
+             </li>
+           </ul>
+         </li>
+			   
+             </li>
+           
+               <li>The job markets 
+             
+			     <ul>
+             <li class="link">
+               <a href="">Unemployment </a>
+             </li>
+             <li class="link">
+               <a href="">Precarious vs permanent positions </a>
+             </li>
+			 <li class="link">
+               <a href="">Layoffs </a>
+             </li>
+			 <li class="link">
+               <a href="">Furlough schemes </a>
+             </li>
+			 	 <li class="link">
+               <a href="">Universal income </a>
+             </li>
+			 	 <li class="link">
+               <a href="">Erased job sectors  </a>
+             </li>
+			              </li>
+			 	 <li class="link">
+               <a href="">Emerging job sectors  </a>
+             </li>
+           </ul>
+         </li>
+			 
+				 
+               <li>Safety in Workplace 
+			   
+			       <ul>
+             <li class="link">
+               <a href="">Physical distancing in the hospitality sector </a>
+             </li>
+             <li class="link">
+               <a href="">Protection measures in service sectors </a>
+             </li>
+			   <li class="link">
+               <a href="">Regulation of employment terms  </a>
+             </li>
+           </ul>
+         </li>
+			   
+			   
+             <li>
+                Health workers 
+                 <ul>
+                   <li class="link">
+                     <a href="">Public support</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Personal Protective Equipment </a>
+                   </li>
+                   <li>
+                    Care homes 
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         
+         </li>
+         <li class="link">
+           <a href="">Institutional Policies</a>
+         </li>
+         <li>
+           Civil Society 
+           <ul>
+             <li class="link">
+               <a href="">gg</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+           </ul>
+         </li>
+		    <li class="link">
+           <a href="">Inequalities </a>
+         </li>
+		   </li>
+		    <li class="link">
+           <a href="">Education  </a>
+         </li>
+		   </li>
+		   </li>
+		    <li class="link">
+           <a href="">International Relation </a>
+         </li>
+       </ul>
+     </li>
+     <li>
+       Arts and Humanities 
+       <ul>
+         <li class="link">
+           <a href="">Religious responses </a>
+         </li>
+         <li class="link">
+           <a href="">Languages and literatures</a>
+         </li>
+         <li>
+           History and philosophy
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Performance arts </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Visual arts  </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Cultural heritage  </a>
+         </li>
+       </ul>
+     </li>     
+     <li class="link">Media and Management 
+	        <ul>
+         <li class="link">
+           <a href="">Campaigns  </a>
+         </li>
+         <li class="link">
+           <a href="">Scientific discourse </a>
+         </li>
+         <li>
+           Conspiracy discourse 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Disinformation in the media  </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Organizational forms   </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Disaster management   </a>
+         </li>
+       </ul>
+     </li>     
+
+     <li class="link">Engineering and Technology 
+	 	        <ul>
+         <li class="link">
+           <a href="">Communication systems   </a>
+         </li>
+         <li class="link">
+           <a href="">Medical infrastructure  </a>
+         </li>
+         <li>
+           Industry adaptation 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Innovation    </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Green technologies    </a>
+
+       </ul>
+     </li>   
+	 <li class="link">Life and Exact Sciences  
+	 	 	        <ul>
+         <li class="link">
+           <a href="">Medicine   </a>
+         </li>
+         <li class="link">
+           <a href="">Epidemiology and virology   </a>
+         </li>
+         <li>
+           Ecology 
+           <ul>
+             <li class="link">
+               <a href="">Im a </a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Systems and networks    </a>
+			</li>
+
+       </ul>
+     </li> 
+   </ul>
+</div>
+
+<br>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<br>
+<br>
+
+<h1> Awareness Campaigns    </h1>
+
+<p> This entry deals with campaigns for raising awareness to social problems as a result of the lockdown.   </p>
+
+<h3>Case description </h3>
+<br>
+<p> On May 21, 2020, ABC News, an Australian news channel, uploaded to YouTube a programme highlighting the implications of the lockdown on increase in domestic abuse. The programme relates to data on domestic abuse before the pandemic and globally and raises concerns about the drastic fall in calls for help since the lockdown started. It urges women, men and children trapped in abusive relations to call helpline numbers. The network was active in raising awareness to the problem as early as April (see here), following guidelines and alerts from the UN, labelling the problem of domestic abuse during the pandemic Shadow Pandemic.     </p>
+
+<h3> SGD Targets</h3>
+<br>
+<p> 3 (Good Health and Well-Being); 5 (Gender Equality)  </p>
+
+<br>
+<b>Functions  </b>
+<br>
+
+<p>
+
+Inclusive; Deliberate; Consistent; Top-down (outside-in); Progressive 
+<br>
+
+
+
+
+The network campaign aims at raising awareness to the plight of women trapped in abusive relationship while in lockdown and in line with statements by UN officials, targeting at least two SDGs.  
+</p>
+
+
+<br> <b>Further Sources </b>
+
+<br><a href="https://www.abc.net.au/life/helping-at-risk-dv-women-during-coronavirus/12110004  ">https://www.abc.net.au/life/helping-at-risk-dv-women-during-coronavirus/12110004 </a>
+
+
+<br><a href="https://www.unwomen.org/en/news/stories/2020/4/statement-ed-phumzile-violence-against-women-during-pandemic ">https://www.unwomen.org/en/news/stories/2020/4/statement-ed-phumzile-violence-against-women-during-pandemic</a>
+
+</body>
+
+</html>

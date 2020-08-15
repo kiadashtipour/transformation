@@ -1,0 +1,478 @@
+<style>
+.menu {
+  --menu-height: 40px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.menu ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
+}
+.menu ul li, .menu ul li a {
+  opacity: 0.8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 200ms;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.menu ul li:hover, .menu ul li a:hover {
+  opacity: 1;
+}
+.menu ul li a, .menu ul li a a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.menu ul li {
+  padding-right: 36px;
+}
+.menu ul li::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFA500;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu ul .link::before {
+  padding-right: 0;
+  display: none;
+}
+.menu > ul {
+  display: flex;
+  height: var(--menu-height);
+  align-items: center;
+  background-color: #000000;
+}
+.menu > ul li {
+  position: relative;
+  margin: 0 8px;
+}
+.menu > ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  min-width: 160px;
+  background-color: #333;
+  position: absolute;
+  top: calc(var(--menu-height) + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 200ms;
+  transition-delay: 200ms;
+}
+.menu > ul li ul li {
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  padding-right: 40px;
+}
+.menu > ul li ul li::before {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #FFA500;
+}
+.menu > ul li ul li ul {
+  top: -2%;
+  left: 100%;
+  transform: translate(0);
+}
+.menu > ul li ul li:hover {
+  background-color: #000000;
+}
+.menu > ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
+</style>
+
+<div class="menu">
+   <ul>
+     <li>
+       Social and Political Science 
+       <ul>
+  
+           <li>Labour and Workers </a>
+		    <ul>
+           
+               <li>Migrant workers 
+			   
+			       <ul>
+             <li class="link">
+               <a href="">Asia</a>
+             </li>
+             <li class="link">
+               <a href="">Western Europe</a>
+             </li>
+			  <li class="link">
+               <a href="">Southern Europe</a>
+             </li>
+           </ul>
+         </li>
+			   
+             </li>
+           
+               <li>The job markets 
+             
+			     <ul>
+             <li class="link">
+               <a href="">Unemployment </a>
+             </li>
+             <li class="link">
+               <a href="">Precarious vs permanent positions </a>
+             </li>
+			 <li class="link">
+               <a href="">Layoffs </a>
+             </li>
+			 <li class="link">
+               <a href="">Furlough schemes </a>
+             </li>
+			 	 <li class="link">
+               <a href="">Universal income </a>
+             </li>
+			 	 <li class="link">
+               <a href="">Erased job sectors  </a>
+             </li>
+			              </li>
+			 	 <li class="link">
+               <a href="">Emerging job sectors  </a>
+             </li>
+           </ul>
+         </li>
+			 
+				 
+               <li>Safety in Workplace 
+			   
+			       <ul>
+             <li class="link">
+               <a href="">Physical distancing in the hospitality sector </a>
+             </li>
+             <li class="link">
+               <a href="">Protection measures in service sectors </a>
+             </li>
+			   <li class="link">
+               <a href="">Regulation of employment terms  </a>
+             </li>
+           </ul>
+         </li>
+			   
+			   
+             <li>
+                Health workers 
+                 <ul>
+                   <li class="link">
+                     <a href="">Public support</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Personal Protective Equipment </a>
+                   </li>
+                   <li>
+                    Care homes 
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         
+         </li>
+         <li class="link">
+           <a href="">Institutional Policies</a>
+         </li>
+         <li>
+           Civil Society 
+           <ul>
+             <li class="link">
+               <a href="">gg</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+           </ul>
+         </li>
+		    <li class="link">
+           <a href="">Inequalities </a>
+         </li>
+		   </li>
+		    <li class="link">
+           <a href="">Education  </a>
+         </li>
+		   </li>
+		   </li>
+		    <li class="link">
+           <a href="">International Relation </a>
+         </li>
+       </ul>
+     </li>
+     <li>
+       Arts and Humanities 
+       <ul>
+         <li class="link">
+           <a href="">Religious responses </a>
+         </li>
+         <li class="link">
+           <a href="">Languages and literatures</a>
+         </li>
+         <li>
+           History and philosophy
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Performance arts </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Visual arts  </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Cultural heritage  </a>
+         </li>
+       </ul>
+     </li>     
+     <li class="link">Media and Management 
+	        <ul>
+         <li class="link">
+           <a href="">Campaigns  </a>
+         </li>
+         <li class="link">
+           <a href="">Scientific discourse </a>
+         </li>
+         <li>
+           Conspiracy discourse 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Disinformation in the media  </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Organizational forms   </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Disaster management   </a>
+         </li>
+       </ul>
+     </li>     
+
+     <li class="link">Engineering and Technology 
+	 	        <ul>
+         <li class="link">
+           <a href="">Communication systems   </a>
+         </li>
+         <li class="link">
+           <a href="">Medical infrastructure  </a>
+         </li>
+         <li>
+           Industry adaptation 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Innovation    </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Green technologies    </a>
+
+       </ul>
+     </li>   
+	 <li class="link">Life and Exact Sciences  
+	 	 	        <ul>
+         <li class="link">
+           <a href="">Medicine   </a>
+         </li>
+         <li class="link">
+           <a href="">Epidemiology and virology   </a>
+         </li>
+         <li>
+           Ecology 
+           <ul>
+             <li class="link">
+               <a href="">Im a </a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Systems and networks    </a>
+			</li>
+
+       </ul>
+     </li> 
+   </ul>
+</div>
+
+<br>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<br>
+<br>
+
+<h1> Tourism sector campaigns   </h1>
+
+<p> The entry deals with the tourism sector campaigns by various government and non-government sectors all over the world. The sections in the entry are specified for the campaigns which target the economic growth and employment of the people in the sector.  </p>
+
+<h3>Case description </h3>
+<br>
+<p> On 13/July/2020 Nas Daily (a video production company owned by Nuseir Yassin1) posted a promotion video titled “Safest Country to Visit in Corona?” showing Dubai as the safe tourist destination during the Covid_19. Yassin started his video saying that he is talking now from Dubai, and he was sitting in the Emirates flight with the essential protective equipment, as the airline provides masks and gloves. Then showed the Covid_19 test inside the airport, the sanitized hotels, open malls and deserts. The video shows the safety measures at the tourist destinations and view spots in Dubai, like the marks of two-meter distance in front of the fountain. The video is a Dubai government tourism campaign as the video promotes tourist destinations, hotels and the Emirate airline, which is a subsidiary of Emirates group owned by the government of Dubai.   </p>
+
+<h3> SGD Targets</h3>
+<br>
+<p> 8 (Decent work and economic growth)  </p>
+
+<br>
+<b>Functions  </b>
+<br>
+
+<p>
+
+Inclusive; Deliberate; Sudden; Top-Down; Progressive 
+<br>
+
+
+The promotion video is inclusive as it promotes the inclusion of tourists during the stressful situation of the pandemic. This deliberate move promotes the stressless travel of the tourists, who feel insecure due to the sudden turn of the virus. The promotion is a top-down approach as the video encourages the government institutions, the economic source of the Dubai government. The mission meets the SDG goal ‘Decent work, and economic growth’ as the flow of tourists boost the economy of the Dubai government.  
+</p>
+
+
+<br> <b>Further Sources </b>
+
+<br><a href="https://www.facebook.com/nasdaily/videos/763640337509111  ">https://www.facebook.com/nasdaily/videos/763640337509111   </a>
+
+
+</body>
+
+</html>

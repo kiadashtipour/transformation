@@ -1,0 +1,450 @@
+<style>
+.menu {
+  --menu-height: 40px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+.menu ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
+}
+.menu ul li, .menu ul li a {
+  opacity: 0.8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 200ms;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.menu ul li:hover, .menu ul li a:hover {
+  opacity: 1;
+}
+.menu ul li a, .menu ul li a a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.menu ul li {
+  padding-right: 36px;
+}
+.menu ul li::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFA500;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu ul .link::before {
+  padding-right: 0;
+  display: none;
+}
+.menu > ul {
+  display: flex;
+  height: var(--menu-height);
+  align-items: center;
+  background-color: #000000;
+}
+.menu > ul li {
+  position: relative;
+  margin: 0 8px;
+}
+.menu > ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  min-width: 160px;
+  background-color: #333;
+  position: absolute;
+  top: calc(var(--menu-height) + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 200ms;
+  transition-delay: 200ms;
+}
+.menu > ul li ul li {
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  padding-right: 40px;
+}
+.menu > ul li ul li::before {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #FFA500;
+}
+.menu > ul li ul li ul {
+  top: -2%;
+  left: 100%;
+  transform: translate(0);
+}
+.menu > ul li ul li:hover {
+  background-color: #000000;
+}
+.menu > ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
+</style>
+
+<div class="menu">
+   <ul>
+     <li>
+       Social and Political Science 
+       <ul>
+         <li class="link">
+           <a href="">Labour and Workers </a>
+		    <ul>
+             <li class="link">
+               <a href="">Migrant workers </a>
+             </li>
+             <li class="link">
+               <a href="">The job markets </a>
+             </li>
+			     <li class="link">
+               <a href="">Safety in Workplace </a>
+             </li>
+             <li>
+                Health workers 
+                 <ul>
+                   <li class="link">
+                     <a href="">Public support</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Personal Protective Equipment </a>
+                   </li>
+                   <li>
+                    Care homes 
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         
+         </li>
+         <li class="link">
+           <a href="">Institutional Policies</a>
+         </li>
+         <li>
+           Civil Society 
+           <ul>
+             <li class="link">
+               <a href="">gg</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+           </ul>
+         </li>
+		    <li class="link">
+           <a href="">Inequalities </a>
+         </li>
+		   </li>
+		    <li class="link">
+           <a href="">Education  </a>
+         </li>
+		   </li>
+		   </li>
+		    <li class="link">
+           <a href="">International Relation </a>
+         </li>
+       </ul>
+     </li>
+     <li>
+       Arts and Humanities 
+       <ul>
+         <li class="link">
+           <a href="">Religious responses </a>
+         </li>
+         <li class="link">
+           <a href="">Languages and literatures</a>
+         </li>
+         <li>
+           History and philosophy
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Performance arts </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Visual arts  </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Cultural heritage  </a>
+         </li>
+       </ul>
+     </li>     
+     <li class="link">Media and Management 
+	        <ul>
+         <li class="link">
+           <a href="">Campaigns  </a>
+         </li>
+         <li class="link">
+           <a href="">Scientific discourse </a>
+         </li>
+         <li>
+           Conspiracy discourse 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Disinformation in the media  </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Organizational forms   </a>
+         </li>
+		 		          <li class="link">
+           <a href="">Disaster management   </a>
+         </li>
+       </ul>
+     </li>     
+
+     <li class="link">Engineering and Technology 
+	 	        <ul>
+         <li class="link">
+           <a href="">Communication systems   </a>
+         </li>
+         <li class="link">
+           <a href="">Medical infrastructure  </a>
+         </li>
+         <li>
+           Industry adaptation 
+           <ul>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Innovation    </a>
+         </li>
+		          </li>
+		          <li class="link">
+           <a href="">Green technologies    </a>
+
+       </ul>
+     </li>   
+	 <li class="link">Life and Exact Sciences  
+	 	 	        <ul>
+         <li class="link">
+           <a href="">Medicine   </a>
+         </li>
+         <li class="link">
+           <a href="">Epidemiology and virology   </a>
+         </li>
+         <li>
+           Ecology 
+           <ul>
+             <li class="link">
+               <a href="">Im a </a>
+             </li>
+             <li class="link">
+               <a href="">Im a link</a>
+             </li>
+             <li>
+                Nested dropdown B
+                 <ul>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li class="link">
+                     <a href="">Im a link</a>
+                   </li>
+                   <li>
+                     Nested dropdown C
+                     <ul>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                       <li class="link">
+                         <a href="">Im a link</a>
+                       </li>
+                     </ul>
+                   </li>
+                 </ul>
+               </li>             
+           </ul>
+         </li>
+		          <li class="link">
+           <a href="">Systems and networks    </a>
+			</li>
+
+       </ul>
+     </li> 
+   </ul>
+</div>
+
+<br>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<br>
+<br>
+<h1>Migrant workers in Asia</h1>
+
+
+This entry deals with people from different parts of the world working in different parts of Asia and becoming stranded or displaced away from home due to lockdowns and travel disruptions. <br>The sections in this entry are specified according to the migrant workers country of origin and the country in which they were stranded. </th>
+    <br>
+
+<h2> 1. Kerala Migrant workers in Dubai  </h2>
+
+<br> On 19 April 2020 KMCC, Dubai [https://en.wikipedia.org/wiki/Kerala_Muslim_Cultural_Centre] with the permission of Dubai Health Authority arranged the biggest isolation center in GCC (Gulf Cooperation Council) countries, with the capacity to accommodate around 10,000 patients in 32 flats of 20 buildings in Warsan [Geographic coordinates: 25.1484375,55.4581413269043] area of Dubai [https://en.wikipedia.org/wiki/Warisan]. The isolation center was arranged mainly for the migrant workers from Kerala, as per the data of the Centre for Development Studies Kerala [http://www.cds.edu/wp-content/uploads/2012/11/WP450.pdf], more than forty percent of the migrant workers from Kerala are working in UAE. Moreover, KMCC Dubai organized 33 charted flights to support the migrant workers in Dubai to return to Kerala. Each flight can board 185 passengers and it costs around 990 dirhams per passenger. The travelling charge is paid by the passenger, except for the deprived passenger that will be paid by the KMCC. The first flight departed from Ras al Khaimah airport to Calicut airport on Wednesday, June 2020 [https://www.mediaonetv.in/guif/2020/06/02/kmcc-chartered-flight-delay]. KMCC, the overseas offshoot of IUML (Indian Union Muslim League) is a collective organization for the well-being of the migrants from Kerala around the world. 
+
+<br>
+<br> <b>SDG targets </b> 
+
+<br>3 (Good Health and Well-Being); 10 (Reduced Inequality); 17 (Partnerships) 
+
+<br> Case functions 
+
+<br> Inclusive; Deliberate; Sudden; Bottom-up; Progressive  
+
+<br>Dubai health authority and KMCC collaborated to reduce the spread of the Covid-19 virus and to support public health, especially for the well-being of the disadvantaged migrant workers from Kerala (SDG3). This initiative of the KMCC is inclusive as the organization covered the travel fees for migrant workers who could not afford it. It is also inclusive because despite being a Muslim organization, it included non-Muslim migrants among those accommodated by the operation. The operation requires coordination and planning; hence it is deliberate. It responds to the sudden crisis imposed by the lockdown in India, depriving migrants from means of transport and from their livelihoods in the Gulf. The KMCC is a grassroots organization, hence bottom-up direction of the case. It is progressive as it addresses the well-being of the migrant workers, reduces their exposure to the virus, to poverty and hunger. It also demonstrates partnerships between NGOs and governments. 
+
+<br> <b>Further Sources </b>
+
+<br><a href="http://members.dubaikmcc.org/ ">http://members.dubaikmcc.org</a>
+<br><a href="https://en.wikipedia.org/wiki/Indian_Union_Muslim_League  ">https://en.wikipedia.org/wiki/Indian_Union_Muslim_League  </a>
+<br><a href="https://www.facebook.com/DubaiKmccOfficial/ ">https://www.facebook.com/DubaiKmccOfficial/ </a>
+
+<h2>2. Filippino migrant workers in Dubai </h2>
+
+<br>On 5th June 2020 Khalid Al Ameri [https://www.youtube.com/watch?v=ChI3DrbmPh4], a YouTube vlogger, posted the story of Feby Cachero Baguisa - a jobless Filipina mother of three [https://gulfnews.com/uae/jobless-filipino-expat-in-dubai-cooks-free-food-for-her-community-1.71782613] - who prepares 200 free meals.  Feby puts a stand outside her apartment in Muraqqabat, Deira, Dubai to serve the free meals for the deprived people who struggle to get the food during the critical time of the pandemic. The meal is packed in a plastic box, and each box is filled with rice, one egg and two-piece of chicken with curry - chicken adobo [https://www.tasteofhome.com/recipes/filipino-chicken-adobo/]. Khalid offered ten thousand dirhams as gratitude for Feby’s initiative. 
+
+<br> <b>SDG Targets </b>
+
+<br>2 (Zero Hunger); 10 (Reduced Inequality) 
+
+<br>Case Functions
+
+<br>Inclusive; Deliberate; Sudden; Bottom-Up; Progressive 
+
+<br>The initiative of Feby Cachero Baguisa is inclusive as she spends from her savings to support the deprived people of her surroundings regardless of gender, ethnicity or religious affiliation. The free meal initiative was started suddenly when the lockdown struck the city and livelihood of the residents, that is why the endeavour is deliberate. The individual attempt of Feby’s family – she, her husband and three kids – is a bottom-up effort. The effort is progressive as it is aimed to mitigate the hunger rate, at least in the small circle of Feby. </td>
+
+<h2>3. Displaced Migrant Workers in Indian Metropolitan Centres </h2>
+
+<br> <b>Case Description </b>
+
+<br>The Indian government announced a lockdown on 24 March 2020. The announcement came four hours before the lockdown was imposed, resulting in tens of thousands of internal migrant workers deprived of their daily-wage income, livelihood and shelter.  As soon as the lockdown came into effect, all public and private transport stopped. From the 3rd day of the lockdown on 27 March, men, women and children started walking back to their homes hundreds of km away from the metropolitan centers.  Many people suffered hunger and physical difficulties, a few dozen of displaced workers died on the way.  
+
+<br><b>SDG Targets </b>
+
+<br>N/A 
+
+<br>Case Functions 
+
+<br>Exclusive; Unintentional; sudden; Top-Down; Regressive 
+
+<br>The sudden implementation of lockdown by the Indian government extensively affected the livelihoods of internal migrant workers in Indian cities. The case regresses significantly from SDGs 1 (No poverty), 2 (Zero hunger), 3 (Good health and well-being), and 10 (Reduced inequalities). It is unintentional because no attention was given to arrange shelter and/or transport back home to the displaced internal migrant workers. </td>
+
+
+</body>
+
+</html>
